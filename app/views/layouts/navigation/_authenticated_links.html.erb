@@ -1,0 +1,6 @@
+<strong><%= current_user.email %></strong>
+<div style="padding-left: 10px;" id="Sessions" class="navbar-left">
+  <%= link_to "Sessions", user_poker_sessions_path(current_user.id), class: "btn btn-outline-success", role: "button" %> 
+</div>
+
+<%= render 'layouts/navigation/account_drop_down' %>

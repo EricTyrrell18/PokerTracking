@@ -1,0 +1,6 @@
+
+<% if current_user.present? %>
+  <%= render 'layouts/navigation/authenticated_links' %>
+<% else %>
+  <%= render 'layouts/navigation/unauthenticated_links' %>
+<% end %>

@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/">Our Logo</a>
+  <form class="form-inline">
+    <a class="btn btn-outline-primary" href="<%= new_user_session_path %>" role="button">
+    Login
+    </a>
+    <div style="padding-left: 10px;">
+      <a class="btn btn-outline-success" href="<%= new_user_registration_path %>" role="button">
+      Sign Up
+      </a>
+    </div>
+    <% if current_user.present? %>
+      <div style="padding-left: 10px;">
+        <a class"btn btn-outline-success" href="<%= user_poker_sessions_path(current_user.id) %>" role="button">
+         Sessions
+        </a>
+    <%end%>
+    </div>
+  </form>
+</nav>

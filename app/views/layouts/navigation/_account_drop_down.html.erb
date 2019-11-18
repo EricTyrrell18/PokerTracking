@@ -1,0 +1,9 @@
+<div class="dropdown" style="padding-left: 10px;">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Account
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <%= link_to "Account", edit_user_password_path, class: "dropdown-item" %>
+    <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+  </div>
+</div>
