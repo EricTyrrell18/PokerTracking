@@ -6,11 +6,13 @@
     <%= f.label :note %> 
     <%= f.text_area :note %>
   </p>
-  <% 5.times do |x| %>
+
+  <% 7.times do  %>
     <%= f.simple_fields_for :table_cards do |ff| %> 
       <%= render 'hidden_card_fields', f:ff %>
     <% end %>
   <% end %>
+
   <p>
     <%= f.submit %>
   </p>

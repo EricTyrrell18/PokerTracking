@@ -23,9 +23,10 @@ function set_card_fields(card){
         "flop1": 1,
 	"flop2": 2,
 	"turn": 3,
-	"river": 4
+	"river": 4,
+	"hole-card0":5,
+	"hole-card1":6
     }
-    
     var hidden_field_id = card_id_dict[card_id]
     
     hidden_field_suit = "hand_table_cards_attributes_" + hidden_field_id + "_suit"  
@@ -50,7 +51,7 @@ $(document).on('turbolinks:load',function( ){
 
     select_card("div#board img")
     // Switch which card is selected on click
-    $("div#board img").on({
+    $("img.selectable").on({
         'click': function(){
 	    // clear the previously selected card
 	    $(selected).attr("data-selected","false")

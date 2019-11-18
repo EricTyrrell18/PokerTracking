@@ -3,6 +3,7 @@
     <th>id</th>
     <th>Result</th>
     <th>Table Cards</th>
+    <th>Hole Cards</th>
     <th>Players</th>
   </thead>
   <tbody>
@@ -12,12 +13,17 @@
       <td><%= hand.id %></td>
       <td><%= hand.result %></td>
       <td>
-        <% hand.table_cards.each do |card| %>
-	  <span><%= card_image_tag(card, size:"37x75") %><span>
+        <% hand.table_cards[0..4].each do |card| %>
+	  <span><%= card_image_tag(card, size:"45x90") %><span>
 	<% end %>
       </td>
       <td>
-        <% game.players. each do |player| %>
+        <% hand.table_cards[5..6].each do |card| %>
+	  <span><%= card_image_tag(card, size:"45x90") %><span>
+	<% end %>
+      </td>
+      <td>
+        <% game.players.each do |player| %>
 	  <div class="span3">
 	    <%= player.name %>
 	  </div>

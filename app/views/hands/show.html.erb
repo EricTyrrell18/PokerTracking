@@ -12,11 +12,19 @@
   </p>
 
   <h2>Board</h2>
-  <% @hand.table_cards.each do |card| %>
+  <% @hand.table_cards[0..4].each do |card| %>
     <span>
       <%= card_image_tag(card, size: "37x75")  %>
     </span>
   <% end %>
+  <h2>Hole Cards</h2>
+  <p>
+  <% @hand.table_cards[5..6].each do |card| %>
+    <span>
+      <%= card_image_tag(card, size: "37x75")  %>
+    </span>
+  <% end %>
+  </p>
   <p></p>
   <h2>Notes</h2>
   <p> 

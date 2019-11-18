@@ -1,17 +1,17 @@
 <div id="board" class="container text-center">
   <h2>Board</h2>
-  <span id="flop">
-    <%= image_tag 'PNG/gray_back.png', size: "45x90", id: "flop0" , data: {selected: true}  %>
-    <%= image_tag 'PNG/gray_back.png', size: "37x90", id: "flop1" %>
-    <%= image_tag 'PNG/gray_back.png', size: "37x90", id: "flop2" %>  
+  <span>
+    <%= image_tag 'PNG/gray_back.png', size: "45x90", id: "flop0" , class: "selectable", data: {selected: true}  %>
+    <%= image_tag 'PNG/gray_back.png', size: "37x90", id: "flop1", class: "selectable" %>
+    <%= image_tag 'PNG/gray_back.png', size: "37x90", id: "flop2", class: "selectable" %>  
   </span><%# End of flop %>
 
-  <span id="turn">
-    <%= image_tag 'PNG/gray_back.png', size: "37x90", id: "turn" %>
+  <span>
+    <%= image_tag 'PNG/gray_back.png', size: "37x90", id: "turn", class: "selectable" %>
   </span><%# End turn %>
 
-  <span id="river">
-    <%= image_tag 'PNG/gray_back.png', size: "37x90", id: "river" %>
+  <span>
+    <%= image_tag 'PNG/gray_back.png', size: "37x90", id: "river", class: "selectable" %>
   </span><%# End River> %>
 
 </div>

@@ -8,7 +8,7 @@ div#deck img{
 div#deck img[in-play=true]{
   visibility: hidden;
 }
-div#board img[data-selected=true]{
+img[data-selected=true]{
   outline: 1px solid red;
 }
 div#board img{

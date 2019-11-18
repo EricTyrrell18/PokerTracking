@@ -25,7 +25,9 @@ class GamesController < ApplicationController
   end
   
   def update
+    
     @game = Game.find(params[:id])
+
     if @game.update(game_params)
       redirect_to game_path(@game.id)
     else
@@ -42,8 +44,8 @@ class GamesController < ApplicationController
   private
     def game_params
       params.require(:game).permit(
-         :date_played,
-	 players_attributes: [:name]
+         :date_played, :id,
+	 players_attributes: [:id, :name, :_destroy],
                     )
 
     end

@@ -15,9 +15,6 @@
  */
 
 
-body {
-  background-color: green;
-}
 
 .table-clickable tbody tr{
   cursor: pointer;

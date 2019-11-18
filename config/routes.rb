@@ -4,5 +4,7 @@ Rails.application.routes.draw do
     resources :players
     resources :hands
   end
+
+  resources :statistics, only: [:index]
   root to: "games#index"
 end

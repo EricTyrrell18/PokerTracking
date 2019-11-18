@@ -3,6 +3,7 @@
   <p>
     <%= f.input :date_played, as: :date %>
   </p>
+  <h2>Players</h2>
   <p>
     <%= f.simple_fields_for :players do |ff| %>
       <%= render 'player_fields', f: ff %>
