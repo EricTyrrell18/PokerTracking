@@ -24,5 +24,8 @@ class Card < ApplicationRecord
     "S": "S",
     "C": "C"
   }
+  
+  validates_associated :hands
+  validates_associated :card_tables
 
 end
