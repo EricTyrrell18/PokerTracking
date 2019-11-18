@@ -16,7 +16,7 @@ $("[data-form-prepend]").click(function(e) {
   return false;
 });
 
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
 
 
     $('#sessions tr').click(function() {

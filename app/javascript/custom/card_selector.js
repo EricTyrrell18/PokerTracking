@@ -40,7 +40,7 @@ function set_card_fields(card){
     hidden_field_rank_selector.val(card_rank)
 
 }
-$(document).ready(function( ){
+$(document).('turbolinks:load',function( ){
     // On an empty board, selected should be the first flop card
     // TODO: handle loading a players deck and preselected cards
     var selected = $('img[data-selected=true]')
