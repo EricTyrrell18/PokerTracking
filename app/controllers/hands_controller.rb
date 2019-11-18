@@ -20,16 +20,26 @@ class HandsController < ApplicationController
       render 'new'
     end
   end
+
   def edit
+    #Haven't gotten this to work yet
+    #@game = Game.find(params[:game_id])
+    #@hand = Hand.find(params[:id])
   end
+
   def update 
   end
-  def delete
+  
+  def destroy
+    @hand = Hand.find(params[:id])
+    @hand.destroy
+
+    redirect_to game_path(params[:game_id])
   end
   private 
     def hand_params
       params.require(:hand).permit(
-        :id, :game_id, :result,
+        :id, :game_id, :result, :note,
 	table_cards_attributes: [:rank, :suit]
       )
     end

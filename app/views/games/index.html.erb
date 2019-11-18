@@ -1,8 +1,8 @@
 <div class="jumbotron text-center">
-  <h2>Poker Pal Hand History<h2>
+  <h2>Poker Pal Session History<h2>
 </div>
-<div class="container-fluid">
-  <%= link_to 'New Session', new_game_path %>
+<%= link_to 'New Session', new_game_path %>
+<div>
 
   <%= render 'games_table', games: @games %>
 </div>

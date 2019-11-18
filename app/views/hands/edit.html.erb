@@ -1,0 +1,8 @@
+<h1>Edit</h1>
+<%= link_to "back", game_hand_path(@game.id, @hand.id) %>
+
+<%= render 'deck' %>
+<br>
+<%= render 'board' %>
+<br>
+<%= render 'form', game:@game, hand:@hand %>

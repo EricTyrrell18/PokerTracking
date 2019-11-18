@@ -9,6 +9,7 @@ class GamesController < ApplicationController
     @game = Game.new
     @game.players.build
   end
+  
   def create
     @game = Game.new(game_params)
     if @game.save
@@ -18,10 +19,26 @@ class GamesController < ApplicationController
     end
 
   end
+  
   def edit
+    @game = Game.find(params[:id])
   end
-  def delete
+  
+  def update
+    @game = Game.find(params[:id])
+    if @game.update(game_params)
+      redirect_to game_path(@game.id)
+    else
+      render 'edit'
+    end
   end
+
+  def destroy
+    @game = Game.find(params[:id])
+    @game.destroy
+    redirect_to games_path
+  end
+
   private
     def game_params
       params.require(:game).permit(

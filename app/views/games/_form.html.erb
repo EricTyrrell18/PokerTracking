@@ -1,3 +1,17 @@
-<%= simple_form_for @poker_session do |f| %>
-  <%= f.input :date_played %>
+<%= simple_form_for(game, url: path) do |f| %>
+  <%= render 'error_form', game: game %> 
+  <p>
+    <%= f.input :date_played, as: :date %>
+  </p>
+  <p>
+    <%= f.simple_fields_for :players do |ff| %>
+      <%= render 'player_fields', f: ff %>
+    <% end %>
+      <div class=links>
+        <%= link_to_add_association 'Add Player', f, :players%>
+      </div>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
 <% end %>

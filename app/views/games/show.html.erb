@@ -1,9 +1,24 @@
 <h1>Show Poker Session</h1>
-
-<%= link_to "Back", games_path %>
-<%= @game.date_played %>
-
+<div id=table-links>
+  <span>
+    <%= link_to "Back", games_path %>
+  <span>
+  &nbsp;
+  <span>
+    <%= link_to 'Add Hand', new_game_hand_path(@game) %>
+  <span>
+  &nbsp;
+  <span>
+    <%= link_to "Edit Session", edit_game_path(@game) %>
+  </span>
+  &nbsp;
+  <span>
+    <%= link_to "Delete Session", game_path(@game),
+      method: :delete,
+      data: {confirm: "Are you sure?"}
+      %>
+  </span>
+</div>
 <div id="hands">
-  <%= link_to 'Add Hand', new_game_hand_path(@game) %>
   <%= render 'hands_table', game: @game %>
 <div>

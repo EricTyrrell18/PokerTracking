@@ -3,12 +3,12 @@
     <%= f.input :result %>
   </p>
   <p>
-    <%= f.label :notes %> 
-    <%= f.text_area :notes %>
+    <%= f.label :note %> 
+    <%= f.text_area :note %>
   </p>
   <% 5.times do |x| %>
     <%= f.simple_fields_for :table_cards do |ff| %> 
-      <%= render 'hidden_card_fields', f:ff, x: x%>
+      <%= render 'hidden_card_fields', f:ff %>
     <% end %>
   <% end %>
   <p>
