@@ -1,0 +1,17 @@
+<%= simple_form_for(hand, url: game_hands_path(game)) do |f| %>
+  <p>
+    <%= f.input :result %>
+  </p>
+  <p>
+    <%= f.label :notes %> 
+    <%= f.text_area :notes %>
+  </p>
+  <% 5.times do |x| %>
+    <%= f.simple_fields_for :table_cards do |ff| %> 
+      <%= render 'hidden_card_fields', f:ff, x: x%>
+    <% end %>
+  <% end %>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

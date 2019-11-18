@@ -3,26 +3,26 @@ class Card < ApplicationRecord
   has_many :hands
   # Setup the neums for easy acces the the Card png files
   enum rank: {
-    Two: "2",
-    Three: "3",
-    Four: "4",
-    Five: "5",
-    Six: "6",
-    Seven: "7",
-    Eight: "8",
-    Nine: "9",
-    Ten: "10",
-    Jack: "J",
-    Queen: "Q",
-    King: "K",
-    Ace: "A"
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9",
+    "10": "10",
+    "J": "J",
+    "Q": "Q",
+    "K": "K",
+    "A": "A"
   }
 
   enum suit: {
-    Hearts: "H",
-    Diamonds: "D",
-    Spades: "S",
-    Clubs: "C"
+    "H": "H",
+    "D": "D",
+    "S": "S",
+    "C": "C"
   }
 
 end

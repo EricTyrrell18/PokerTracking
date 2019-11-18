@@ -1,4 +1,4 @@
-<table class="table table-striped table-hover table-clickable">
+<table class="table table-striped table-hover table-clickable table-bordered">
   <thead class="thead-dark">
     <th>id</th>
     <th>Result</th>
@@ -11,8 +11,18 @@
       <td style="display:none;"><%= link_to "", game_hand_path(game.id ,hand)  %></td>
       <td><%= hand.id %></td>
       <td><%= hand.result %></td>
-      <td>Test</td>
-      <td>test</td>
+      <td>
+        <% hand.table_cards.each do |card| %>
+	  <span><%= card_image_tag(card, size:"37x75") %><span>
+	<% end %>
+      </td>
+      <td>
+        <% game.players. each do |player| %>
+	  <div class="span3">
+	    <%= player.name %>
+	  </div>
+	<% end %>
+      </td>
     </tr>
     <% end %>
   </tbody>

@@ -14,10 +14,11 @@
  *= require_self
  */
 
-#board img[data-selected=true]{
-  outline: 1px solid red;
-}
-#deck img[in-play=true]{
-  visibility: hidden;
+
+body {
+  background-color: green;
 }
 
+.table-clickable tbody tr{
+  cursor: pointer;
+}

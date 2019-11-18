@@ -31,4 +31,19 @@ module ApplicationHelper
   
     content_tag(:a, name, html_options, &block)
   end
+  
+  # Give the path to the right image
+  def card_image_path(card) 
+    if card.rank and card.suit
+      card_path = "PNG/" + card.rank + card.suit + ".png"  
+    else 
+      card_path = "PNG/gray_back.png"
+    end
+  end
+
+  # Return a list of img tags
+  def card_image_tag(card, options={})
+    image_tag(card_image_path(card), options)
+  end
+
 end

@@ -3,3 +3,11 @@
 <%= @hand.result %>
 
 
+<div class="container">
+  <h2>Table Cards</h2>
+  <% @hand.table_cards.each do |card| %>
+    <span>
+      <%= card_image_tag(card, size: "37x75")  %>
+    </span>
+  <% end %>
+</div>

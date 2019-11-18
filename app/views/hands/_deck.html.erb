@@ -1,4 +1,5 @@
-<div id="deck" class="container" >
+<div id="deck" class="container text-center">
+  <h2>Deck</h2>
   <% create_deck[0..25].each do |card| %>
       <%= image_tag "PNG/" + card + ".png", id: card, size: "37x75" %>
   <% end %>

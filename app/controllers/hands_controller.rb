@@ -14,7 +14,11 @@ class HandsController < ApplicationController
     @game = Game.find(params[:game_id])
     @hand = @game.hands.build(hand_params)
     #@hand.card_table.build
-    @hand.save!
+    if @hand.save!
+      redirect_to game_hand_path(@game.id, @hand.id)
+    else
+      render 'new'
+    end
   end
   def edit
   end

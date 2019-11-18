@@ -40,11 +40,15 @@ function set_card_fields(card){
     hidden_field_rank_selector.val(card_rank)
 
 }
-$(document).('turbolinks:load',function( ){
+function select_card(selector){
+
+}
+$(document).on('turbolinks:load',function( ){
     // On an empty board, selected should be the first flop card
     // TODO: handle loading a players deck and preselected cards
     var selected = $('img[data-selected=true]')
 
+    select_card("div#board img")
     // Switch which card is selected on click
     $("div#board img").on({
         'click': function(){
@@ -54,7 +58,6 @@ $(document).('turbolinks:load',function( ){
 	    selected = this
 	}
     });
-
     // Switch the image of the selected card with the clicked on card
     $("div#deck img").on({
         'click': function(){
