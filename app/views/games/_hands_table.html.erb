@@ -1,0 +1,19 @@
+<table class="table table-striped table-hover table-clickable">
+  <thead class="thead-dark">
+    <th>id</th>
+    <th>Result</th>
+    <th>Table Cards</th>
+    <th>Players</th>
+  </thead>
+  <tbody>
+    <% game.hands.each do |hand| %>
+    <tr>
+      <td style="display:none;"><%= link_to "", game_hand_path(game.id ,hand)  %></td>
+      <td><%= hand.id %></td>
+      <td><%= hand.result %></td>
+      <td>Test</td>
+      <td>test</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

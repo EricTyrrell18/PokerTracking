@@ -1,0 +1,20 @@
+<h1>Show Poker Session</h1>
+<%= link_to "Back", games_path %>
+<%= @game.date_played %>
+<div id="players">
+  <table class="player-table">
+    <tr>
+      <th>Name</th>
+    </tr>
+    <% @game.players.each do |player| %>
+      <tr>
+        <td><%= player.name  %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<div id="hands">
+  <%= link_to 'Add Hand', new_game_hand_path(@game) %>
+  <%= render 'hands_table', game: @game %>
+<div>

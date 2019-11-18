@@ -1,0 +1,7 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_played: 2019-11-17
+
+two:
+  date_played: 2019-11-17

@@ -1,0 +1,25 @@
+<div class="table-responsive-sm" >
+  <table id="games" class="table table-hover table-striped table-clickable" >
+    <thead class="thead-dark ">
+      <th scope="col">ID</th>
+      <th scope="col">Date Played</th>
+      <th scope="col">Results</th>
+      <th scope="col">Players</th>
+    </thead>
+    <tbody>
+      <% games.each do |game| %>
+        <tr>
+          <td style="display:none;"><%= link_to '', game_path(game) %></td>
+          <td><%= game.id %></td>
+          <td><%= game.date_played %></td>
+          <td><%= game.hands.sum(:result) %></td>
+          <td>
+            <% game.players.each do |player| %>
+              <div class="span3"><%= player.name %></div>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

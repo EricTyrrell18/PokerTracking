@@ -1,0 +1,19 @@
+<h1>New Poker Session</h1>
+<%= link_to 'Back', games_path %>
+
+<%= simple_form_for(@game, url: games_path) do |f| %>
+  <p>
+    <%= f.input :date_played, as: :date %>
+  </p>
+  <p>
+    <%= f.simple_fields_for :players do |ff| %>
+      <%= render 'player_fields', f: ff %>
+    <% end %>
+      <div class=links>
+        <%= link_to_add_association 'Add Player', f, :players%>
+      </div>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
