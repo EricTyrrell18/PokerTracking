@@ -5,7 +5,8 @@ ruby '2.5.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
-
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
 # Postgres as db
 gem 'pg'
 # Figaro for managing env variables

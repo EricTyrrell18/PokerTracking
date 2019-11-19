@@ -15,7 +15,7 @@
  */
 
 
-
+@import 'bootstrap';
 .table-clickable tbody tr{
   cursor: pointer;
 }
