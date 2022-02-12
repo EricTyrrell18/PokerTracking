@@ -18,7 +18,7 @@ gem 'rspec', '~> 3.9'
 gem 'rspec-rails', '~> 3.9'
 gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2'
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 5.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
